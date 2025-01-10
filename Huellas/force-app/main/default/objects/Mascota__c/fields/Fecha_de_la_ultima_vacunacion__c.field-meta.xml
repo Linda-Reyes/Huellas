@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_de_la_ultima_vacunacion__c</fullName>
+    <description>Este campo contiene la fecha de la última vacunación. Un disparador Apex rellenara la fecha de la última vacunación cuando un registro de &quot;Historial de vacunación&quot; se crea para la mascota.</description>
+    <inlineHelpText>Se rellena cuando un registro de &quot;Historial de vacunación&quot; se crea para la mascota.</inlineHelpText>
+    <label>Fecha de la última vacunación</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>
