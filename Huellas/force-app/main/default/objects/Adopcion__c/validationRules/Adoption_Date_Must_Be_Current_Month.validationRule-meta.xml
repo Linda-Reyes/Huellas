@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adoption_Date_Must_Be_Current_Month</fullName>
+    <active>true</active>
+    <description>Evita que la fecha de adopción esté fuera del mes en curso debido al cierre contable.</description>
+    <errorConditionFormula>NOT(ISBLANK( Fecha__c ))  &amp;&amp; 
+(MONTH( Fecha__c ) != MONTH(TODAY())  ||  YEAR( Fecha__c ) != YEAR(TODAY()))</errorConditionFormula>
+    <errorDisplayField>Fecha__c</errorDisplayField>
+    <errorMessage>La fecha de adopción debe estar dentro del mes en curso debido al cierre contable. Verifica la fecha e inténtalo de nuevo.</errorMessage>
+</ValidationRule>

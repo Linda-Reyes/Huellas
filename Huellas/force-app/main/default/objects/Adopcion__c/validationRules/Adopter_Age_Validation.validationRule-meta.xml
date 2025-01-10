@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adopter_Age_Validation</fullName>
+    <active>true</active>
+    <description>Valida que el contacto que realiza la adopción sea menor de 18 años.</description>
+    <errorConditionFormula>Contact__r.Birthdate = NULL  ||  
+
+FLOOR((TODAY() -  Contact__r.Birthdate  ) / 365.25) &lt; 18</errorConditionFormula>
+    <errorDisplayField>Contact__c</errorDisplayField>
+    <errorMessage>El contacto seleccionado debe tener al menos 18 años para ser adoptante. Por favor, selecciona otro contacto o verifica la fecha de nacimiento.</errorMessage>
+</ValidationRule>

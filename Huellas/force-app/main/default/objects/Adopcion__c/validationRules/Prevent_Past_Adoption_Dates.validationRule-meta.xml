@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Past_Adoption_Dates</fullName>
+    <active>true</active>
+    <description>Evitar que los usuarios ingresen una fecha de adopción anterior a la fecha actual.</description>
+    <errorConditionFormula>Fecha__c  &lt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Fecha__c</errorDisplayField>
+    <errorMessage>La fecha de adopción no puede ser anterior a la fecha actual. Por favor, ingrese una fecha válida.</errorMessage>
+</ValidationRule>
