@@ -1,5 +1,12 @@
+import { LightningElement, wire } from 'lwc';
+import getAdoptions from '@salesforce/apex/AdoptionController.getAdoptions';
+
+export default class AdoptionInfo extends LightningElement {
+    @wire(getAdoptions)
+    adoptions;
+}
+
 import { createElement } from 'lwc';
-import AdoptionInfo from 'c/adoptionInfo';
 
 describe('c-adoption-info', () => {
     afterEach(() => {
