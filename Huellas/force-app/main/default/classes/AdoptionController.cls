@@ -27,12 +27,12 @@ public with sharing class AdoptionController {
 
         // Prepara los datos para el componente LWC
         Map<String, Object> adoptionData = new Map<String, Object>();
+        adoptionData.put('isAdopted', isAdopted);
         adoptionData.put('contactName', adoptionRecord.Contact__r.Name);
         adoptionData.put('contactAge', contactAge);
         adoptionData.put('petName', adoptionRecord.Mascota__r.Name);
         adoptionData.put('petBreed', adoptionRecord.Mascota__r.Raza__c);
         adoptionData.put('adoptionDate', adoptionRecord.Fecha__c.format());
-        adoptionData.put('isAdopted', isAdopted);
 
         return adoptionData;
     }
