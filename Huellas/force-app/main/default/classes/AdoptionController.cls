@@ -23,7 +23,7 @@ public with sharing class AdoptionController {
         Integer contactAge = calculateAge(adoptionRecord.Contact__r.Birthdate);
 
         // Verifica si la adopción está finalizada
-        Boolean isAdopted = adoptionRecord.Estado__c == 'Finalizada';
+        Boolean isAdopted = adoptionRecord.Estado__c == 'A la espera de búsqueda de mascotas';
 
         // Prepara los datos para el componente LWC
         Map<String, Object> adoptionData = new Map<String, Object>();
