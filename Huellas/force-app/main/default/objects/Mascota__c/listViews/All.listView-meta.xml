@@ -5,6 +5,7 @@
     <columns>Especie__c</columns>
     <columns>Raza__c</columns>
     <columns>Fecha_de_la_ultima_vacunacion__c</columns>
+    <columns>Fecha_de_la_proxima_vacunacion__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>
