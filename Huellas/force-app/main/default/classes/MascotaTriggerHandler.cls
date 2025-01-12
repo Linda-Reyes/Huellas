@@ -31,7 +31,7 @@ public with sharing class MascotaTriggerHandler {
         if (Schema.sObjectType.Vaccination_Frequency__mdt.isAccessible()) {
             Map<String, Integer> especieToIntervalMap = new Map<String, Integer>();
             for (Vaccination_Frequency__mdt freq : [SELECT Especie__c, Interval_in_days__c FROM Vaccination_Frequency__mdt]) {
-                especieToIntervalMap.put(freq.Especie__c, freq.Interval_in_days__c);
+                especieToIntervalMap.put(freq.Especie__c, Integer.valueOf(freq.Interval_in_days__c));
             }
 
             for (Mascota__c mascota : mascotas) {

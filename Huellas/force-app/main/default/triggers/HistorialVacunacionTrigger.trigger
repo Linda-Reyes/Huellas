@@ -1,6 +1,6 @@
-trigger HistorialVacunacionTrigger on Historial_de_vacunacion__c (after insert) {
+trigger HistorialVacunacionTrigger on historial_de_vacunacion__c (after insert) {
     Set<Id> mascotaIds = new Set<Id>();
-    for (Historial_de_vacunacion__c historial : Trigger.new) {
+    for (historial_de_vacunacion__c historial : Trigger.new) {
         mascotaIds.add(historial.Mascota__c);
     }
 
@@ -12,10 +12,10 @@ trigger HistorialVacunacionTrigger on Historial_de_vacunacion__c (after insert) 
     ]);
 
     List<Mascota__c> mascotasToUpdate = new List<Mascota__c>();
-    for (Historial_de_vacunacion__c historial : Trigger.new) {
+    for (historial_de_vacunacion__c historial : Trigger.new) {
         Mascota__c mascota = mascotasMap.get(historial.Mascota__c);
         if (mascota != null) {
-            mascota.Fecha_de_la_ultima_vacunacion__c = historial.Fecha_de_vacunacion__c;
+            mascota.Fecha_de_la_ultima_vacunacion__c = historial.Fecha__c;
             mascotasToUpdate.add(mascota);
         }
     }
