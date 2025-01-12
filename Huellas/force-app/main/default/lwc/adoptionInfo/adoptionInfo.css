@@ -1,0 +1,31 @@
+.adoption-info {
+    text-align: center; /* Centra todo el contenido */
+    margin: 20px auto; /* Añade espacio alrededor del componente */
+    max-width: 600px; /* Limita el ancho máximo */
+    background-color: #f9f9f9; /* Fondo suave */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.adoption-info h2 {
+    color: #4CAF50; /* Verde para el título */
+    font-size: 24px; /* Tamaño de fuente más grande */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.certificate-stamp {
+    width: 300px; /* Ancho mayor para la imagen */
+    height: auto; /* Mantén las proporciones */
+    max-width: 100%; /* Evita que exceda el ancho del contenedor */
+    display: block; /* Asegura que sea un bloque centrado */
+    margin: 20px auto; /* Centrado vertical y horizontal */
+}
+
+.adoption-info p {
+    font-size: 16px; /* Tamaño de fuente más claro */
+    color: #333; /* Texto oscuro */
+    line-height: 1.5; /* Altura de línea */
+    margin: 10px 0; /* Espaciado entre párrafos */
+}

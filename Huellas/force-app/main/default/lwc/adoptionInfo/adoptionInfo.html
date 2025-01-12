@@ -1,18 +1,22 @@
 <template>
-    <div class="adoption-info">
-        <template if:true={adoptionData}>
-            <h2>Información de Adopción</h2>
-            <p><strong>Nombre del Contacto:</strong> {adoptionData.contactName}</p>
-            <p><strong>Edad del Contacto:</strong> {adoptionData.contactAge}</p>
-            <p><strong>Nombre de la Mascota:</strong> {adoptionData.petName}</p>
-            <p><strong>Raza de la Mascota:</strong> {adoptionData.petBreed}</p>
-            <p><strong>Fecha de Adopción:</strong> {adoptionData.adoptionDate}</p>
-            <template if:true={adoptionData.isAdopted}>
-                <img src="/resource/CertifiedStamp" alt="Certificado de Adopción" class="certificate-stamp" />
+    <div class="adoption-info-container">
+        <div class="adoption-info">
+            <template if:true={adoptionData}>
+                <h2>Información de Adopción</h2>
+                <template if:true={adoptionData.isAdopted}>
+                    <img src="/resource/CertifiedStamp" alt="Certificado de Adopción" class="certificate-stamp" />
+                </template>
+                <div class="info-group">
+                    <p><strong>Nombre del Contacto:</strong> {adoptionData.contactName}</p>
+                    <p><strong>Edad del Contacto:</strong> {adoptionData.contactAge}</p>
+                    <p><strong>Nombre de la Mascota:</strong> {adoptionData.petName}</p>
+                    <p><strong>Raza de la Mascota:</strong> {adoptionData.petBreed}</p>
+                    <p><strong>Fecha de Adopción:</strong> {adoptionData.adoptionDate}</p>
+                </div>
             </template>
-        </template>
-        <template if:false={adoptionData}>
-            <p>Cargando datos de adopción...</p>
-        </template>
+            <template if:false={adoptionData}>
+                <p class="loading-text">Cargando datos de adopción...</p>
+            </template>
+        </div>
     </div>
 </template>
