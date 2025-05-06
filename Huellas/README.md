@@ -56,3 +56,5 @@ La aplicación utiliza cuatro objetos personalizados:
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/Linda-Reyes/Huellas.git
+.
+
